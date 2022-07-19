@@ -7,3 +7,8 @@ Firebase-Practice
 - Go to project overveiw option and find web button i.e </>
 - Click on web button and register new app
 - After the app register copy firebaseConfig and past in (index.html file and login.html file)
+
+
+
+Here is youtube video link:
+https://www.youtube.com/watch?v=BOITPwChVP4
