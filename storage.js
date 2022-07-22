@@ -2,8 +2,8 @@
 
 
 // firebase.database().ref('users/pakistan').push({
-//     name: "ghous",
-//     email: "ghous@gmail.com"
+//     name: "ameen",
+//     email: "ameen@gmail.com"
 // })
 
 
@@ -55,5 +55,5 @@ let saveImage = () => {
 
 // var obj = {}
 
-// obj.name = "ghous"
-// obj.name = "ahmed"
+// obj.name = "ameen"
+// obj.name = "alam"
