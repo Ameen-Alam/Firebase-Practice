@@ -14,7 +14,7 @@ let register = () => {
 
             firebase.database().ref(`users/${res.user.uid}`).set(user)
                 .then(() => {
-                    alert("User register hogaya")
+                    alert("new user is registered")
                     window.location = "login.html"
                 })
 
@@ -32,6 +32,7 @@ let login = () => {
     firebase.auth().signInWithEmailAndPassword(email.value, password.value)
         .then((res) => {
             firebase.database().ref(`users/${res.user.uid}`).once('value', (data) => {
+                alert("successfully logged in")
                 console.log(data.val())
             })
         })
