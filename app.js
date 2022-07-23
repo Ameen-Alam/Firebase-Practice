@@ -33,6 +33,7 @@ let login = () => {
         .then((res) => {
             firebase.database().ref(`users/${res.user.uid}`).once('value', (data) => {
                 alert("successfully logged in")
+                window.location = "home.html"
                 console.log(data.val())
             })
         })
@@ -42,6 +43,17 @@ let login = () => {
 
 }
 
+let logout = () => {
+    firebase.auth().signOut()
+        .then(() => {
+            alert('Signed Out');
+            window.location = "login.html"
+        })
+        .catch((err) => {
+            console.log('err=>', err)
+        })
+
+}
 
 
 // let abc = new Promise(() => {
