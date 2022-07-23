@@ -1,4 +1,12 @@
+// Your web app's Firebase configuration
+const firebaseConfig = {
+ 
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
 
+
+        
 let register = () => {
     let username = document.getElementById("username");
     let email = document.getElementById("email");
