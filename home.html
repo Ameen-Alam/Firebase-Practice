@@ -14,16 +14,23 @@
     <nav class="navbar navbar-light bg-light">
         <div class="container-fluid">
             <a class="navbar-brand">Navbar</a>
-                <button onclick="logout()" class="btn btn-outline-success"
-                    type="submit">Logout</button>
+            <button onclick="logout()" class="btn btn-outline-success" type="submit">Logout</button>
         </div>
     </nav>
     <div class="container py-4">
         <h1 class="heading-1">Welcome to Home Screen</h1>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nisi architecto at maiores nesciunt neque placeat!
-            Nam consequatur veniam consectetur dolores blanditiis distinctio, non est? Excepturi nobis mollitia minima
-            voluptatem cum?</p>
     </div>
+    <div class="container py-4">
+        <div class="card" style="width: 18rem;">
+            <img src="" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text"></p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+    </div>
+
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-auth.js"></script>
@@ -33,9 +40,22 @@
      https://firebase.google.com/docs/web/setup#available-libraries -->
 
     <script>
+        let cardtitle = document.querySelector(".card-title");
+        let cardtext = document.querySelector(".card-text");
+        let getData = localStorage.getItem("data")
+        let objData = JSON.parse(getData)
+        cardtitle.innerHTML = objData.username
+        cardtext.innerHTML = objData.email
+
         // Your web app's Firebase configuration
         const firebaseConfig = {
-     
+            apiKey: "AIzaSyBIgXhGsj-8HtHKQAsbCWu2di_cLjiz6V4",
+            authDomain: "adminpannel-2625e.firebaseapp.com",
+            databaseURL: "https://adminpannel-2625e.firebaseio.com",
+            projectId: "adminpannel-2625e",
+            storageBucket: "adminpannel-2625e.appspot.com",
+            messagingSenderId: "388760984590",
+            appId: "1:388760984590:web:cbf7be52964d07e9a6b05f"
         };
         // Initialize Firebase
         firebase.initializeApp(firebaseConfig);
